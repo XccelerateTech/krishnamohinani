@@ -8,7 +8,7 @@
     </head>
     <body>
         <script>
-            let informMe = function (endpoint,value){
+            let informMe = function(endpoint,value){
                 $.ajax({
                     url:`https://restcountries.eu/rest/v2/${endpoint}/${value}`,
                     beforeSend: function(xhr){
@@ -24,6 +24,7 @@
                     console.log('This runs regardless')
                 })
             }
+            informMe('name', 'Germany');
 </script>
         
         
