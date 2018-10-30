@@ -1,0 +1,97 @@
+body{
+    background-color: brown;
+}
+
+
+#jumbo1 {
+    
+   
+    width: 83%;
+    border-radius: 5px;
+}
+
+.container{
+    background: blanchedalmond;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#photo-container {
+    
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 83%;
+}
+
+#imagez {
+    
+    
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+
+.navbar {
+    background: black;
+    border-bottom: solid 1px #fff;
+    opacity: 0.3;
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    color: #f05f40 !important;
+    font-weight: bold;
+}
+
+.navbar-brandActive{
+    color: #f05f40 !important;
+    font-size: 1.3rem;
+}
+
+
+
+#img-but{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainpic{
+
+    width: 80%;
+    align-self: center;
+    max-width:  500px;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+
+}
+
+#foot{
+
+    width: 83%;
+    border-radius: 5px;
+
+}
+
+.textt {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.middle{
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+

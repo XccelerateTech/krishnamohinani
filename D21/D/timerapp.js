@@ -17,8 +17,8 @@ class Countdown extends EventEmitter {
             if(remaining==0){
                 clearInterval(interval);
             }
-            this.emit('tick',remaining);
-            that.timePassed++;
+            that.emit('tick',remaining);
+            timePassed++;
         }
 
     }

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Krish</title>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    </head>
+    <body>
+        <div>
+            <canvas id='canvas' height="1366" width="768" style="border: 1px black dotted" >Your browser..</canvas>
+            <script type="text/javascript">
+                // $(function(){
+                //     function drawLine(ctx,start,end){
+                //         ctx.beginPath();
+                //         ctx.moveTo(start[0],start[1]);
+                //         ctx.lineTo(end[0],end[1]);
+                //         ctx.stroke();
+                //     }
+
+                    let canvas = document.getElementById('canvas');
+                    let context = canvas.getContext('2d');
+                    let dragging = false;
+                    context.strokeStyle = "#df4b26";
+                    context.lineJoin = "round";
+                    context.lineWidth = 5;
+                    $('#canvas').mousedown(function(e){
+                        let mouseX = e.offsetX;
+                        let mouseY = e.offsetY;
+                        context.moveTo(mouseX,mouseY);
+                        draw(mouseX,mouseY);
+                        dragging=true;
+                    });
+                    $('#canvas').mousemove(function(e){
+                        if (dragging){
+                            let mouseX = e.offsetX;
+                            let mouseY = e.offsetY;
+                            draw(mouseX,mouseY);
+                        }
+                    });
+                    $('#canvas').mouseup(function(e){
+                        dragging = false;
+                    });
+                    $('#canvas').mouseleave(function(e){
+                        dragging = false;
+                    });
+
+                    function draw(x,y){
+                        context.lineTo(x,y);
+                        context.moveTo(x,y);
+                        context.closePath();
+                        context.stroke();
+                    }
+
+
+                //})
+                
+                
+
+            </script>
+        </div>
+    </body>
+</html>

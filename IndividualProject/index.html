@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Krishna Mohinani Personal Page</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width = device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/stylesheets/stylesheet.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+        <!-- Bootstrap Libraries-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+        <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    </head>
+    <body data-spy='scroll' data-target=".navbar">
+        <!--Navigation bar implemented using bootstrap template-->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href='#'></a>Krishna Mohinani</a>
+        
+
+        <!--Adjustment to navigation bar if page size is altered-->
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbar-content' aria-controls='navbar-content' aria-expanded='false' aria-label='Toggle navigation'>
+                <span class='navbar-toggler-icon'></span>
+            </button>
+
+
+            <div class='collapse navbar-collapse' id='navbar-content'>
+                <ul class='navbar-nav ml-auto'>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='#jumbo1'>About</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='#photo-container'>Pictures</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class='nav-link' href='#foot'>Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </nav>
+
+        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02'
+        aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+        </button>
+
+        <!--Section just below Navbar-->
+        <section class='container' id='jumbo1'>
+            
+            <div>
+                <div class='page-header' class='textt' id='page-title'><h1 class='textt'>Welcome to my Individual Project page!</h1></div>
+        
+
+            
+                Welcome to my personal website for the Accelerate HK course. I've made this website predominantly using HTML, CSS and Bootstrap.
+
+                <h3 class='textt'>About Me</h3>
+
+                I graduated from UCLA with a Bachelor of Science degree in Mathematics and Economics, and have since moved on to this course. Prior to this course I had only taken an elementary C++ course, so programming is still quite new to me. My hobbies include soccer, weightlifting and poker.  
+            
+                This website contains a photo album of myself, as well as a space for my future projects which I hope to update soon
+                
+                
+            </div>
+        </section>
+        
+        
+        <!--Photo album-->
+        <section class='container container-fluid' id='photo-container'>
+            
+            <h1 class='textt'>Pictures of Me</h1>
+            <div>
+            This is a photo album of me. I have used javascript to implement the button that allows the user to shift between the photos fot their viewing pleasure.
+            </div>
+            
+            
+            <div id>
+                <div class='middle' id='imagez'>
+                    <img src="images/photo1.jpg" alt="Picture" id='mainpic'>
+                
+                </div>
+                <div class='middle' id='list'>
+                    <button type="button" class="btn btn-primary btn-sm middle" id='img-but'>See Next Image</button>
+                    
+                    
+                </div>
+            </div>
+
+        </section>
+
+        <section class='container container-fluid' id='foot'>
+            <div>
+                <h1 class='textt'>
+                    Contact Details
+                </h1>
+                <div>
+                    Here are some details about me:
+
+                    <a target="_blank" title="follow me on facebook" href="https://www.facebook.com/krishmu3"><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
+                    <a target="_blank" title="follow me on instagram" href="https://www.instagram.com/indominuskrish"><img alt="follow me on instagram" src="https://c866088.ssl.cf3.rackcdn.com/assets/instagram30x30.png" border=0></a>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+
+            /*
+            The following code allows us to scroll through images using the button.
+            I created an array of images then set a function to respond to the event of the button being clicked by changing the image to the next one in the array. When we reach the final image and the button is clicked, the first image is displayed
+            */
+
+            var imgArray = new Array();
+
+            imgArray[0] = new Image();
+            imgArray[0].src = 'images/photo1.jpg';
+
+            imgArray[1] = new Image();
+            imgArray[1].src = 'images/photo2.jpg';
+
+            imgArray[2] = new Image();
+            imgArray[2].src = 'images/photo3.jpg';
+
+            imgArray[3] = new Image();
+            imgArray[3].src = 'images/photo4.jpg';
+
+            imgArray[4] = new Image();
+            imgArray[4].src = 'images/photo5.jpg';
+
+            
+            var btnn = document.getElementById('img-but');
+            btnn.onclick = function(){
+                console.log('ive been clicked')
+                var pic = document.getElementById('mainpic');
+                    for (var i=0;i<imgArray.length;i++){
+                        if (imgArray[i].src == pic.src){
+                            if (i==4){
+                                document.getElementById('mainpic').src=imgArray[0].src;
+                                break;
+                            }
+                            document.getElementById('mainpic').src=imgArray[i+1].src;
+                            break;
+                        }
+                    }
+                    
+            }
+
+            
+            
+            
+            
+
+
+                       
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>

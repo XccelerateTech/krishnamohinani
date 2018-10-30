@@ -1,13 +1,13 @@
 var Countdown = require('./timerapp');
 
-var cd = new Countdown;
+var cd = new Countdown();
 
 cd.on('tick',function(num){
     if (num==0){
-        console.log(`kaboom`);
-    } else {
+        return console.log(`kaboom`);
+    } 
     console.log(`${num} seconds left`);
-    }
-});
+    
+})
 
 cd.ticker(5);
