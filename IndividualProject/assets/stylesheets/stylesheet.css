@@ -3,6 +3,10 @@ body{
 }
 
 
+
+
+
+
 #jumbo1 {
     
    
@@ -14,6 +18,14 @@ body{
     background: blanchedalmond;
     margin-top: 30px;
     margin-bottom: 30px;
+    border: 10px tan;
+    padding: 20px;
+}
+
+
+
+.container:hover{
+    background: lightgoldenrodyellow;
 }
 
 #photo-container {
@@ -22,6 +34,7 @@ body{
     margin-top: 30px;
     margin-bottom: 30px;
     width: 83%;
+    
 }
 
 #imagez {
