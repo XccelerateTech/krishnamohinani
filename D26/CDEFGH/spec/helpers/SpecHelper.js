@@ -1,3 +1,6 @@
+var Song = require('Song');
+
+
 beforeEach(function () {
     jasmine.addMatchers({
       toBeInTheSameAlbumAs: function () {

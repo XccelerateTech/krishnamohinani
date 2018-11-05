@@ -14,9 +14,7 @@ class Song {
         throw new Error("not yet done");
     }
 
-    isInSameAlbum(otherSong){
-        return (this.album == otherSong.album);
-    }
+
 
 }
 
