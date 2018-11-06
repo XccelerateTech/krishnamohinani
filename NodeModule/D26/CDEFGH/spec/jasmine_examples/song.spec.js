@@ -1,6 +1,7 @@
 // describe("Player", function() {
 
   var Song = require('../../lib/jasmine_examples/Song');
+  var helper = require('../helpers/jasmine_examples/SpecHelper')
   
   var song;
   var song1;
